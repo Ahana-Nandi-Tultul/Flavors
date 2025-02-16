@@ -1,0 +1,184 @@
+[
+      {
+        "name": "Carrot",
+        "image": "https://evergreenfoods.co.uk/wp-content/uploads/2019/06/carrot-600x600.png",
+        "category": "Vegetables",
+        "description": "Fresh organic carrots rich in vitamins, fiber, and antioxidants. Ideal for salads, soups, and healthy meals.",
+        "quantity": 100,
+        "price": 250,
+        "rating": 4.7,
+        "tags": ["organic", "fresh", "healthy"]
+      },
+      {
+        "name": "Tomato",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/8/89/Tomato_je.jpg",
+        "category": "Vegetables",
+        "description": "Juicy red tomatoes full of vitamins. Perfect for curries, salads, and making fresh tomato sauces.",
+        "quantity": 100,
+        "price": 180,
+        "rating": 4.6,
+        "tags": ["fresh", "juicy", "healthy"]
+      },
+      {
+        "name": "Potato",
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTXTmSwA5WnE3pJ6572IxTOIo0JjYW5fkRHrQ&s",
+        "category": "Vegetables",
+        "description": "Staple vegetable, rich in carbohydrates. Used in curries, fries, and many traditional dishes.",
+        "quantity": 100,
+        "price": 160,
+        "rating": 4.5,
+        "tags": ["versatile", "staple", "fresh"]
+      },
+      {
+        "name": "Spinach",
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ9IUDvoyut-AZD9ItXygHR5Bqcb5rnFci4EVXf4W0f80xm_qWUi0Ipt1o4q8N2nvLojcc&usqp=CAU",
+        "category": "Vegetables",
+        "description": "Leafy green rich in iron and fiber. Perfect for soups, curries, and salads.",
+        "quantity": 100,
+        "price": 200,
+        "rating": 4.8,
+        "tags": ["green", "nutritious", "organic"]
+      },
+      {
+        "name": "Onion",
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR_c4mzTsqYoLWHNziM4mHQEEp6-qCek6H7bQ&s",
+        "category": "Vegetables",
+        "description": "Essential ingredient in cooking. Adds flavor to curries, salads, and sauces.",
+        "quantity": 200,
+        "price": 220,
+        "rating": 4.6,
+        "tags": ["staple", "fresh", "essential"]
+      },
+      {
+        "name": "Apple",
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSr4Fo2rTO4AovAp8Qpz4bg9p_UkHTmEkNXIQ&s",
+        "category": "Fruits",
+        "description": "Sweet, juicy red apples full of nutrients and fiber. Great for snacking, desserts, and fresh juices.",
+        "quantity": 100,
+        "price": 300,
+        "rating": 4.8,
+        "tags": ["fresh", "juicy", "organic"]
+      },
+      {
+        "name": "Banana",
+        "image": "https://hips.hearstapps.com/hmg-prod/images/ripe-yellow-bananas-at-the-shopping-market-fruits-royalty-free-image-1712833209.jpg?crop=0.66635xw:1xh;center,top&resize=640:*",
+        "category": "Fruits",
+        "description": "Rich in potassium and fiber. A great snack or addition to smoothies and desserts.",
+        "quantity": 100,
+        "price": 120,
+        "rating": 4.7,
+        "tags": ["nutritious", "fresh", "staple"]
+      },
+      {
+        "name": "Mango",
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRN0Wfpzw8BkVS0tkIF8mVR-MatKmkaFlREGA&s",
+        "category": "Fruits",
+        "description": "Sweet, juicy mangoes packed with vitamins. Ideal for smoothies, desserts, or fresh eating.",
+        "quantity": 100,
+        "price": 450,
+        "rating": 4.9,
+        "tags": ["sweet", "juicy", "seasonal"]
+      },
+      {
+        "name": "Orange",
+        "image": "https://www.jiomart.com/images/product/original/590000025/orange-imported-1-kg-product-images-o590000025-p590000025-0-202410011652.jpg?im=Resize=(420,420)",
+        "category": "Fruits",
+        "description": "Citrus fruit high in vitamin C. Great for fresh juice, snacking, or adding to desserts.",
+        "quantity": 100,
+        "price": 220,
+        "rating": 4.7,
+        "tags": ["citrus", "fresh", "healthy"]
+      },
+      {
+        "name": "Pineapple",
+        "image": "https://content.presspage.com/uploads/1460/f2e16525-fddb-471e-a09d-c9fd17ba34e5/1920_stock-photo-cutting-fresh-pineapple-on-wooden-background-399593335.jpg?10000",
+        "category": "Fruits",
+        "description": "Tropical fruit with a sweet and tangy taste. Perfect for juices, salads, and desserts.",
+        "quantity": 100,
+        "price": 350,
+        "rating": 4.6,
+        "tags": ["tropical", "juicy", "delicious"]
+      },
+      {
+        "name": "Chicken Breast",
+        "image": "https://www.allrecipes.com/thmb/Bw4L_IuQHhHeqq52cEkWbA5PIGo=/0x512/filters:no_upscale():max_bytes(150000):strip_icc()/16160-juicy-grilled-chicken-breasts-ddmfs-5594-hero-3x4-902673c819994c0191442304b40104af.jpg",
+        "category": "Meat",
+        "description": "Skinless, boneless chicken breast, rich in protein. Perfect for grilling, roasting, or making delicious curries.",
+        "quantity": 1,
+        "price": 500,
+        "rating": 4.6,
+        "tags": ["protein", "fresh", "healthy"]
+      },
+      {
+        "name": "Beef",
+        "image": "https://cdn.britannica.com/68/143268-050-917048EA/Beef-loin.jpg",
+        "category": "Meat",
+        "description": "Fresh, tender beef rich in protein and iron. Ideal for steaks, curries, and grilling.",
+        "quantity": 50,
+        "price": 900,
+        "rating": 4.8,
+        "tags": ["rich", "protein", "fresh"]
+      },
+      {
+        "name": "Mutton",
+        "image": "https://www.freshtohome.com/blog/wp-content/uploads/2024/08/goat-curry-cut.jpg",
+        "category": "Meat",
+        "description": "Tender and flavorful mutton, great for making biryani, kebabs, and traditional dishes.",
+        "quantity": 50,
+        "price": 1200,
+        "rating": 4.7,
+        "tags": ["rich", "delicious", "premium"]
+      },
+      {
+        "name": "Lamb Chops",
+        "image": "https://www.foodnetwork.com/content/dam/images/food/fullset/2012/2/22/0/EI1C01_grilled-lamb-chops_s4x3.jpg",
+        "category": "Meat",
+        "description": "Juicy, tender lamb chops with rich flavor. Perfect for grilling or roasting.",
+        "quantity": 50,
+        "price": 1300,
+        "rating": 4.9,
+        "tags": ["premium", "delicious", "tender"]
+      },
+      {
+        "name": "Duck Meat",
+        "image": "https://gamekeepersmeat.com.au/cdn/shop/files/GK_dryagedduckbuffet-min_600x600_crop_center.jpg?v=1694995276",
+        "category": "Meat",
+        "description": "Rich and flavorful duck meat, excellent for roasting and traditional dishes.",
+        "quantity": 60,
+        "price": 750,
+        "rating": 4.5,
+        "tags": ["exotic", "rich", "tender"]
+      },
+      {
+        "name": "Whole Wheat Flour",
+        "image": "https://i0.wp.com/amybakesbread.com/wp-content/uploads/2024/01/IMG_9070-768x1024.jpeg?ssl=1",
+        "category": "Wheat",
+        "description": "High-quality whole wheat flour, great for making rotis, bread, and other baked goods. Rich in fiber.",
+        "quantity": 50,
+        "price": 400,
+        "rating": 4.5,
+        "tags": ["whole grain", "organic", "healthy"]
+      },
+      {
+        "name": "Atta Flour",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/26/Atta_flour.jpg/1200px-Atta_flour.jpg",
+        "category": "Wheat",
+        "description": "Soft and nutritious atta flour, perfect for making chapatis and parathas.",
+        "quantity": 60,
+        "price": 380,
+        "rating": 4.6,
+        "tags": ["soft", "organic", "staple"]
+      },
+      {
+        "name": "Basmati Rice",
+        "image": "https://www.sharmispassions.com/wp-content/uploads/2024/07/perfect-basmati-rice7-500x500.jpg",
+        "category": "Rice",
+        "description": "Premium basmati rice, aromatic and long-grain. Ideal for biryani, pulao, and special rice dishes.",
+        "quantity": 5,
+        "price": 1000,
+        "rating": 4.7,
+        "tags": ["premium", "long grain", "fragrant"]
+      }
+]
+
+  
