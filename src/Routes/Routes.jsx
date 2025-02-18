@@ -9,6 +9,9 @@ import Signup from "../pages/Signup/Signup";
 import Dashboard from "../Layouts/Dashboard";
 import AdminHome from "../pages/Dashboard/Admin/AdminHome/AdminHome";
 import PrivateRoute from "./PrivateRoute";
+import AdminRoutes from "./AdminRoutes";
+import CustomerHome from "../pages/Dashboard/Customers/CustomerHome/CustomerHome";
+import CustomerRoutes from "./CustomerRoutes";
 
  export const router = createBrowserRouter([
     {
@@ -36,7 +39,11 @@ import PrivateRoute from "./PrivateRoute";
         children: [
           {
             path : "adminHome",
-            element: <AdminHome></AdminHome>
+            element: <AdminRoutes><AdminHome></AdminHome></AdminRoutes>
+          },
+          {
+             path: "customerHome",
+             element:<CustomerRoutes><CustomerHome></CustomerHome></CustomerRoutes> 
           }
 
         ]

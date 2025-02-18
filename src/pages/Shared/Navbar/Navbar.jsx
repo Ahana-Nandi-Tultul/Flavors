@@ -2,12 +2,13 @@ import { Link, NavLink } from "react-router-dom";
 import useAuth from "../../../hooks/useAuth";
 import { useState } from "react";
 import ProfileLogout from "../../../components/profileLogout/ProfileLogout";
+import useAdminOrCustomer from "../../../hooks/useAdminOrCustomer";
 
 
 const Navbar = () => {
     const {user, logout} = useAuth();
     const [isOpen, setIsOpen] = useState(false);
-    const [isAdminOrCustomerLoading] = useState(true);
+    const [isAdminOrCustomer] = useAdminOrCustomer(true);
    
     const handleLogout = () => {
         logout()
@@ -24,8 +25,8 @@ const Navbar = () => {
        
         {
             user ? 
-           isAdminOrCustomerLoading?.isAdmin ? <NavLink to="/dashboard/adminHome" className="font-semibold mr-4">Dashboard</NavLink> :
-            <NavLink to="/dashboard/adminHome" className="font-semibold mr-4">Dashboard</NavLink> :
+            isAdminOrCustomer?.isAdmin ? <NavLink to="/dashboard/adminHome" className="font-semibold mr-4">Dashboard</NavLink> :
+            <NavLink to="/dashboard/customerHome" className="font-semibold mr-4">Dashboard</NavLink> :
             ''
         }
     </>

@@ -16,7 +16,7 @@ const Item = ({ item }) => {
                     <p></p>
                     <div className="flex items-center w-full justify-between">
                             <p>${item.price}</p>
-                        <button onClick={() =>  handleNavigate(item._id)} className="btn btn-primary">View Details</button>
+                        <button onClick={() =>  handleNavigate(item._id)} className="btn bg-[#2ccf31]">View Details</button>
                     </div>
                 </div>
             </div>

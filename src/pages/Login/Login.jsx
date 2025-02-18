@@ -91,10 +91,10 @@ const Login = () => {
                             one capital letter, one special letter</small></span>}
                         </div>
                         <div className="form-control mt-6">
-                        <input type="submit" value="Login" className="btn bg-[#01a2a6] text-white"/>
+                        <input type="submit" value="Login" className="btn bg-[#2ccf31] text-white"/>
                         </div>
                         <p><small>New to Flavors? Please 
-                            <Link className='text-[#01a2a6]' to="/signup"> Sign Up</Link></small></p>
+                            <Link className='text-[#27aa2c]' to="/signup"> Sign Up</Link></small></p>
                     </form>
                         <SocialLogin></SocialLogin>
                     </div>

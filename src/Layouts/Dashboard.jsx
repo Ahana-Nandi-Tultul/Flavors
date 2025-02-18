@@ -4,12 +4,12 @@ import { FaPalette, FaReadme, FaUserGroup } from 'react-icons/fa6';
 import { FaRegHeart, FaCreditCard, FaHome, FaShoppingCart } from 'react-icons/fa';
 import { SiNginxproxymanager } from 'react-icons/si';
 import Footer from "../pages/Shared/Footer/Footer";
-import useAdminOrCustomer from "../hooks/userAdminOrCustomer";
 import { FaDatabase } from "react-icons/fa6";
+import useAdminOrCustomer from "../hooks/useAdminOrCustomer";
 
 const Dashboard = () => {
     const [isAdminOrCustomer] = useAdminOrCustomer();
-    console.log(isAdminOrCustomer);
+    //console.log(isAdminOrCustomer);
     return (
         <>
             <DashboardNav></DashboardNav>
@@ -22,7 +22,7 @@ const Dashboard = () => {
                     </div>
                     <div className="drawer-side">
                         <label htmlFor="my-drawer-2" className="drawer-overlay"></label>
-                        <ul className={`menu dasActiveCS p-4 w-72 min-h-full bg-[#245e5f] text-base-content`}>
+                        <ul className={`menu dasActiveCS p-4 w-72 min-h-full bg-[#0d4b0f] text-base-content`}>
                             {
                                 isAdminOrCustomer?.isAdmin &&
                                 <>

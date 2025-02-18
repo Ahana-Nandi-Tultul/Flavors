@@ -18,7 +18,7 @@ const DashboardNav = () => {
     
     return (
         <>
-             <div className={`navbar p-4 bg-[#ff8d22] text-white`}>
+             <div className={`navbar p-4 bg-[#1b991f] text-white`}>
                 <div className="navbar-start">
                     <div className="dropdown">
                     <label tabIndex={0} className="btn btn-ghost lg:hidden" htmlFor="my-drawer-2">

@@ -164,10 +164,10 @@ const Signup = () => {
                                 <small>Confirm Password field is required</small></span>}
                         </div>
                         <div className="form-control mt-6">
-                        <input type="submit" value="Sign up" className="btn bg-[#01a2a6] text-white"/>
+                        <input type="submit" value="Sign up" className="btn bg-[#2ccf31] text-white"/>
                         </div>
                         <p><small>Already have an account? Please 
-                            <Link className='text-[#01a2a6]' to="/login"> Login</Link></small></p>
+                            <Link className='text-[#27aa2c]' to="/login"> Login</Link></small></p>
                     </form>
                     <SocialLogin></SocialLogin>
                     </div>
