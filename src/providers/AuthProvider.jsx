@@ -39,7 +39,7 @@ const AuthProvider = ({children}) => {
                 .then(res => res.json())
                 .then(data => {
                     // console.log(data)
-                    localStorage.setItem('talkTime-access-token', data?.token);
+                    localStorage.setItem('flavors-access-token', data?.token);
                     setLoading(false);
         
                 })

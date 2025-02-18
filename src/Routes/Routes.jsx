@@ -6,6 +6,9 @@ import Home from "../pages/Home/Home";
 import ItemDetails from "../pages/Home/ItemDetails/ItemDetails";
 import Login from "../pages/Login/Login";
 import Signup from "../pages/Signup/Signup";
+import Dashboard from "../Layouts/Dashboard";
+import AdminHome from "../pages/Dashboard/Admin/AdminHome/AdminHome";
+import PrivateRoute from "./PrivateRoute";
 
  export const router = createBrowserRouter([
     {
@@ -26,6 +29,17 @@ import Signup from "../pages/Signup/Signup";
           element: <Signup></Signup>
        }
       ]
+    },
+    {
+        path: "dashboard",
+        element: <PrivateRoute><Dashboard></Dashboard></PrivateRoute>,
+        children: [
+          {
+            path : "adminHome",
+            element: <AdminHome></AdminHome>
+          }
+
+        ]
     },
     {
         path: '/item/:id',

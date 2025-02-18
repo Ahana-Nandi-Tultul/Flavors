@@ -69,14 +69,15 @@ const Login = () => {
                         </div>
                         <div className="form-control">
                             <label className="label">
-                                <span className={`label-text `}>Password</span>
+                                <span className={`label-text`}>Password*</span>
                             </label>
                             <div className="relative">
                                 <input
                                 type={showPassword ? 'text' : 'password'}
                                 placeholder="Password"
-                                className={`input input-bordered w-fullbg-base-100 text-black`}
-                                {...register("password", { required: true })} required/>
+                                className={`input input-bordered w-full`} 
+                                {...register("password", { required: true, minLength: 6, 
+                                pattern: /^(?=.*[A-Z])(?=.*[!@#$&*])/i })} required/>
                                 <span
                                 className={`absolute inset-y-0 right-0 px-3 py-2 btn bg-transparent border-0`}
                                 onClick={() => setShowPassword(!showPassword)}
@@ -84,12 +85,15 @@ const Login = () => {
                                 {showPassword ? <FaEyeSlash /> : <FaEye />}
                                 </span>
                             </div>
-                            {errors.password && <span>Name field is required</span>}
+                            
+                            {errors.password && <span className="text-red-500">
+                                <small>Password field is required. Password must have 6 characters,
+                            one capital letter, one special letter</small></span>}
                         </div>
                         <div className="form-control mt-6">
                         <input type="submit" value="Login" className="btn bg-[#01a2a6] text-white"/>
                         </div>
-                        <p><small>New to TalkTime? Please 
+                        <p><small>New to Flavors? Please 
                             <Link className='text-[#01a2a6]' to="/signup"> Sign Up</Link></small></p>
                     </form>
                         <SocialLogin></SocialLogin>

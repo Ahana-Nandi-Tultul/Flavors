@@ -7,12 +7,12 @@ import ProfileLogout from "../../../components/profileLogout/ProfileLogout";
 const Navbar = () => {
     const {user, logout} = useAuth();
     const [isOpen, setIsOpen] = useState(false);
-    const [isAdminOrInsLoading] = useState(true);
+    const [isAdminOrCustomerLoading] = useState(true);
    
     const handleLogout = () => {
         logout()
         .then(() => {
-            //localStorage.removeItem('talkTime-access-token');
+            localStorage.removeItem('flavors-access-token');
         })
         .catch(error => {
             console.log(error)
@@ -24,8 +24,8 @@ const Navbar = () => {
        
         {
             user ? 
-           isAdminOrInsLoading?.isAdmin ? <NavLink to="#" className="font-semibold mr-4">Dashboard</NavLink> :
-            <NavLink to="#" className="font-semibold mr-4">Dashboard</NavLink> :
+           isAdminOrCustomerLoading?.isAdmin ? <NavLink to="/dashboard/adminHome" className="font-semibold mr-4">Dashboard</NavLink> :
+            <NavLink to="/dashboard/adminHome" className="font-semibold mr-4">Dashboard</NavLink> :
             ''
         }
     </>
