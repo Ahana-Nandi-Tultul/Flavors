@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import useItems from '../../hooks/useItems';
+import useItems from '../../../hooks/useItems';
 import Item from '../../Shared/Item/item';
 import SectionTitle from '../../../components/sectionTile/SectionTitle';
 import { useLoaderData } from 'react-router-dom';
@@ -26,7 +26,7 @@ const AllItems = () => {
         };
         fetchData();
     }, [currentPage, itemsPerPage]);  // Ensure itemsPerPage is included
-    
+
     const handleSearch = event => {
         event.preventDefault()
         const form = event.target;

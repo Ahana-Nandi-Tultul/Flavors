@@ -4,7 +4,9 @@ import img1 from "../../../assets/banner/banner_1.jpg";
 import img2 from "../../../assets/banner/banner_2.jpg";
 import img3 from "../../../assets/banner/banner_3.jpg";
 import img4 from "../../../assets/banner/banner_4.jpg";
+import useTitle from "../../../hooks/useTitle";
 const Banner = () => {
+    useTitle("Home")
     return (
         <div>
             <Carousel>

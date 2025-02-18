@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from 'react';
-import useItems from '../../hooks/useItems';
+import useItems from '../../../hooks/useItems';
 import { useNavigate, useParams } from 'react-router-dom';
 import { Rating } from '@smastrom/react-rating';
 import '@smastrom/react-rating/style.css';
 import { FaArrowLeft } from 'react-icons/fa';
-import CartInput from '../../../components/sectionTile/cartInput/CartInput';
+import CartInput from '../../../components/cartInput/CartInput';
 
 const ItemDetails = () => {
     const idObj = useParams();
@@ -54,7 +54,7 @@ const ItemDetails = () => {
                             <p>Sub-Category: {category}</p>
                             <p>Description: {description}</p>
                             <div className="card-actions md:flex justify-between items-center">
-                                <CartInput></CartInput>
+                               <CartInput></CartInput>
                             </div>
                             <hr />
                             <div className="card-actions md:flex justify-between mt-5 items-center">
