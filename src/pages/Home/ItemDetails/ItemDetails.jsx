@@ -45,7 +45,7 @@ const ItemDetails = () => {
             <div className="fixed inset-0 flex justify-center items-center">
                 <div className="bg-white p-6 rounded shadow-lg w-5/6">
                     <div className="card card-side flex flex-col md:flex-row bg-base-100 shadow-xl overflow-y-scroll">
-                        <figure><img src={image} alt="Item" className='h-full' style={{width: "100%"}} /></figure>
+                        <figure><img src={image} alt="Item" className='h-full' style={{width: "100%", height: "400px"}} /></figure>
                         <div className="card-body">
                             <h2 className="card-title">{name}</h2>
                             <hr />

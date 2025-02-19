@@ -27,7 +27,7 @@ const Dashboard = () => {
                                 isAdminOrCustomer?.isAdmin &&
                                 <>
                                     <NavLink to='/dashboard/adminHome' className="flex text-lg text-white items-center gap-2 mb-2" ><FaPalette /> Dashboard</NavLink>
-                                    <NavLink to='/dashboard/products' className="flex text-lg text-white items-center gap-2 mb-2" ><FaDatabase /> Manage Products</NavLink>
+                                    <NavLink to='/dashboard/adminAllItems' className="flex text-lg text-white items-center gap-2 mb-2" ><FaDatabase /> Manage Products</NavLink>
                                     <NavLink to='/dashboard/users' className="flex text-lg text-white items-center gap-2 mb-2" ><FaUserGroup /> Manage Users</NavLink>
                                     <NavLink to='/dashboard/orders' className="flex text-lg text-white items-center gap-2 mb-2" ><SiNginxproxymanager /> Manage Orders</NavLink>
                                 </>

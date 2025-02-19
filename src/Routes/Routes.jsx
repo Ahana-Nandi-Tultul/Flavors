@@ -12,6 +12,8 @@ import PrivateRoute from "./PrivateRoute";
 import AdminRoutes from "./AdminRoutes";
 import CustomerHome from "../pages/Dashboard/Customers/CustomerHome/CustomerHome";
 import CustomerRoutes from "./CustomerRoutes";
+import AllProducts from "../pages/Dashboard/Admin/Products/AllProducts/AllProducts";
+import AddItem from "../pages/Dashboard/Admin/Products/AddItem/AddItem";
 
  export const router = createBrowserRouter([
     {
@@ -40,6 +42,14 @@ import CustomerRoutes from "./CustomerRoutes";
           {
             path : "adminHome",
             element: <AdminRoutes><AdminHome></AdminHome></AdminRoutes>
+          },
+          {
+              path: "adminAllItems",
+              element: <AdminRoutes><AllProducts></AllProducts></AdminRoutes>
+          },
+          {
+              path: "adminAddItem",
+              element: <AdminRoutes><AddItem></AddItem></AdminRoutes>
           },
           {
              path: "customerHome",

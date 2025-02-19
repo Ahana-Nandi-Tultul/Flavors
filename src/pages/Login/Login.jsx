@@ -20,34 +20,42 @@ const Login = () => {
         handleSubmit,
         formState: { errors }
       } = useForm();
-      const onSubmit = (data) =>{
-        console.log(data)
+      const onSubmit = (data) => {
         login(data.email, data.password)
         .then(result => {
-            const loggedUser = result.user;
-            // console.log(loggedUser)
-            Swal.fire({
-                position: 'top-end',
-                icon: 'success',
-                title: 'Successfully! You have logged in your account.',
-                showConfirmButton: false,
-                timer: 1500
-              });
-            if(!loading){
-
-                navigate(from, {replace: true})
-            }  
+            fetch(`http://localhost:5000/users/${data.email}`)
+            .then(res => res.json())
+            .then(userData => {
+                const role = userData.role; // Get user role from backend
+    
+                Swal.fire({
+                    position: 'top-end',
+                    icon: 'success',
+                    title: 'Successfully logged in!',
+                    showConfirmButton: false,
+                    timer: 1500
+                });
+    
+                if (!loading) {
+                    if (role === "Admin") {
+                        navigate("/dashboard/adminHome", { replace: true });
+                    } else if (role === "Customer") {
+                        navigate("/dashboard/customerHome", { replace: true });
+                    } else {
+                        navigate("/", { replace: true }); 
+                    }
+                }
+            });
         })
         .catch(error => {
-            console.log(error)
             Swal.fire({
                 title: 'Error!',
                 text: `${error?.message}`,
                 icon: 'error',
                 confirmButtonText: 'Ok'
-              })
-        })
-      } 
+            });
+        });
+    };
     return (
         <>
             <div className="hero min-h-screen" data-aos="fade-down">
