@@ -3,12 +3,14 @@ import useAuth from "../../../hooks/useAuth";
 import { useState } from "react";
 import ProfileLogout from "../../../components/profileLogout/ProfileLogout";
 import useAdminOrCustomer from "../../../hooks/useAdminOrCustomer";
+import CartModal from "./carModal";
 
 
 const Navbar = () => {
     const {user, logout} = useAuth();
     const [isOpen, setIsOpen] = useState(false);
     const [isAdminOrCustomer] = useAdminOrCustomer(true);
+    const [isCartOpen, setIsCartOpen] = useState(false);
    
     const handleLogout = () => {
         logout()
@@ -21,7 +23,7 @@ const Navbar = () => {
     }
     const navLinks = <>
         <NavLink to="/" className="font-semibold mr-4">Home</NavLink>
-        <NavLink to="/cart" className="font-semibold mr-4">Cart</NavLink>
+        <button onClick={() => setIsCartOpen(true)} className="font-semibold mr-4">Cart</button>
        
         {
             user ? 
@@ -63,6 +65,7 @@ const Navbar = () => {
                     
                 </div>
             </div>
+            <CartModal isOpen={isCartOpen} onClose={() => setIsCartOpen(false)} user={user} syncCartWithDB={() => {}} />
         </div>
     );
 };

@@ -36,15 +36,14 @@ const Dashboard = () => {
                                 isAdminOrCustomer?.isCustomer &&
                                 <>
                                     <NavLink to='/dashboard/studenthome' className="flex text-lg text-white items-center gap-2 mb-2" ><FaPalette /> Dashboard</NavLink>
-                                    <NavLink to='/dashboard/cart' className="flex text-lg text-white items-center gap-2 mb-2" ><FaShoppingCart />My Cart</NavLink>
-                                    <NavLink to='/dashboard/wishlist' className="flex text-lg text-white items-center gap-2 mb-2" ><FaRegHeart /> Wish List</NavLink>
+                                    <NavLink to='/dashboard/order' className="flex text-lg text-white items-center gap-2 mb-2" ><FaShoppingCart />My Cart</NavLink>
                                     <NavLink to='/dashboard/paymentHistory' className="flex text-lg text-white items-center gap-2 mb-2" ><FaCreditCard /> My payment History</NavLink>
 
                                 </>
                             }
                             <div className="divider"></div>
                             <NavLink to='/' className="flex text-lg text-white items-center gap-2 mb-2" ><FaHome /> Home</NavLink>
-                            <NavLink to='/cart' className="flex text-lg text-white items-center gap-2 mb-2" ><FaReadme /> Cart</NavLink>
+                            <NavLink to='/dashboard/order' className="flex text-lg text-white items-center gap-2 mb-2" ><FaReadme /> Cart</NavLink>
 
                         </ul>
 

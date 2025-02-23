@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
 import { FaCartArrowDown } from "react-icons/fa";
+import useCartUtilities from '../../utilities/cartAndWishList';
 
-const CartInput = () => {
+const CartInput = ({item}) => {
     const [quantity, setQuantity] = useState(1); 
-
+    const { addToCart } = useCartUtilities();
     const handleIncrease = () => {
         setQuantity(prevQuantity => prevQuantity + 1); 
     };
@@ -13,6 +14,24 @@ const CartInput = () => {
             setQuantity(prevQuantity => prevQuantity - 1);
         }
     };
+
+    const handleAddToCart = (item) => {
+        const { _id, name, image, price } = item;
+        const totalQuantity = price * quantity;
+    
+        const newItem = {
+            id: _id,
+            name, 
+            image, 
+            price, 
+            quantity, 
+            totalQuantity
+        };
+
+        console.log("Adding to cart:", newItem);  
+        addToCart(newItem);
+    };
+    
 
     return (
         <div className='items-center md:flex gap-3'>
@@ -35,7 +54,7 @@ const CartInput = () => {
             >
                 +
             </button>
-            <button className="btn btn-success mr-auto ">
+            <button className="btn btn-success mr-auto " onClick={() => handleAddToCart(item)}>
                 Add To Cart <FaCartArrowDown className="ml-3" />
             </button>
         </div>

@@ -14,6 +14,8 @@ import CustomerHome from "../pages/Dashboard/Customers/CustomerHome/CustomerHome
 import CustomerRoutes from "./CustomerRoutes";
 import AllProducts from "../pages/Dashboard/Admin/Products/AllProducts/AllProducts";
 import AddItem from "../pages/Dashboard/Admin/Products/AddItem/AddItem";
+import Order from "../pages/Dashboard/Customers/Order/Order";
+import Payments from "../pages/Dashboard/Customers/Payment/Payment";
 
  export const router = createBrowserRouter([
     {
@@ -54,6 +56,14 @@ import AddItem from "../pages/Dashboard/Admin/Products/AddItem/AddItem";
           {
              path: "customerHome",
              element:<CustomerRoutes><CustomerHome></CustomerHome></CustomerRoutes> 
+          },
+          {
+              path: "order",
+              element: <Order></Order>
+          },
+          {
+              path: "payments",
+              element: <Payments></Payments>
           }
 
         ]

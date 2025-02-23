@@ -10,7 +10,7 @@ const ItemDetails = () => {
     const idObj = useParams();
     const id = idObj.id;
     const [items] = useItems();
-    console.log(items);
+    //console.log(items);
     const [item, setItem] = useState({});
     const [open, setOpen] = useState(true); // Added state to toggle visibility
 
@@ -36,7 +36,7 @@ const ItemDetails = () => {
         setOpen(!open); // Toggle the visibility
     };
 
-    console.log(item);
+    //console.log(item);
     const { name, description, image, quantity, category, rating, price, tags } = item;
 
     return (
@@ -54,7 +54,7 @@ const ItemDetails = () => {
                             <p>Sub-Category: {category}</p>
                             <p>Description: {description}</p>
                             <div className="card-actions md:flex justify-between items-center">
-                               <CartInput></CartInput>
+                               <CartInput item = {item}></CartInput>
                             </div>
                             <hr />
                             <div className="card-actions md:flex justify-between mt-5 items-center">

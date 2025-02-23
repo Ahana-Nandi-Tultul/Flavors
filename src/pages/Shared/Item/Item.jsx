@@ -7,6 +7,7 @@ const Item = ({ item }) => {
         {
             navigate(`/item/${id}`)
         } 
+
     return (
         <div>
             <div className="card bg-base-100 shadow-xl">
@@ -14,7 +15,7 @@ const Item = ({ item }) => {
                 <div className="card-body">
                     <h2 className="card-title">{item.name}</h2>
                     <p></p>
-                    <div className="flex items-center w-full justify-between">
+                    <div className="flex items-center w-full justify-evenly">
                             <p>${item.price}</p>
                         <button onClick={() =>  handleNavigate(item._id)} className="btn bg-[#2ccf31]">View Details</button>
                     </div>

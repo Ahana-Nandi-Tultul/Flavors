@@ -11,7 +11,7 @@ const useItems = () => {
             setLoading(false);
         })
     }, [])
-    console.log(items);
+    //console.log(items);
     return [items, loading, setItems];
 };
 
