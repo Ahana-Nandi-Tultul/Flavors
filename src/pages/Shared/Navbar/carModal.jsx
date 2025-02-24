@@ -1,26 +1,26 @@
 import React, { useEffect, useState } from "react";
 import { IoMdClose } from "react-icons/io";
 import useCartUtilities from "../../../utilities/cartAndWishList";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 
 const CartModal = ({ isOpen, onClose, user }) => {
   const [cartItems, setCartItems] = useState([]);
   const {getCartItems, syncLocalStorageWithDB, removeItemFromCart} = useCartUtilities()
-  const navigate = useNavigate();
+  
   useEffect(() => {
     const fetchCart = async () => {
       const storedCart = await getCartItems(user);
       setCartItems(storedCart);
     };
     fetchCart();
-  }, [user, cartItems]);
+  }, [user]);
 
   useEffect(() => {
     if (user && cartItems.length > 0) {
       syncLocalStorageWithDB(user, cartItems);
     }
-  }, [user, cartItems]);
+  }, [user]);
 
   const removeFromCart = (id) => {
     console.log(id);
@@ -32,9 +32,7 @@ const CartModal = ({ isOpen, onClose, user }) => {
     //   return updatedCart;
     // });
   };
-  const handleOrderNow = () => {
-    navigate("/dashboard/order", { replace: true });
-  }
+  
   useEffect(() => {
     if (isOpen) {
       document.body.style.overflow = "hidden";
@@ -70,13 +68,13 @@ const CartModal = ({ isOpen, onClose, user }) => {
         ) : (
           <p className="text-gray-500">Your cart is empty.</p>
         )}
-        <button
+        <Link to = "/dashboard/order"
           className="btn bg-[#2ccf31] text-white w-full mt-4 py-2 rounded disabled:opacity-50"
           disabled={cartItems.length === 0} 
-          onClick={() => handleOrderNow()}
+          
         >
           Order Now
-        </button>
+        </Link>
       </div>
     </div>
   );

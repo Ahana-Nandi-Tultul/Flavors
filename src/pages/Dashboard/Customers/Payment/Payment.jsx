@@ -23,9 +23,9 @@ const Payments = () => {
       }
     };
     fetchCart();
-  }, [user]);
+  }, [user, cartItems]);
 
-  const totalPrice = cartItems.reduce((sum, item) => (item.price || 0) + sum, 0);
+  const totalPrice = cartItems.reduce((sum, item) => (item.totalPrice  || 0) + sum, 0);
   const price = parseFloat(totalPrice.toFixed(2));
   const stripePromise = loadStripe(import.meta.env.VITE_Payment_Gateway_PK);
 

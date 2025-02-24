@@ -37,13 +37,7 @@ const Login = () => {
                 });
     
                 if (!loading) {
-                    if (role === "Admin") {
-                        navigate("/dashboard/adminHome", { replace: true });
-                    } else if (role === "Customer") {
-                        navigate("/dashboard/customerHome", { replace: true });
-                    } else {
-                        navigate("/", { replace: true }); 
-                    }
+                    navigate(from, {replace: true}) 
                 }
             });
         })

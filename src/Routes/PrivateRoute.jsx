@@ -1,17 +1,23 @@
-import { Navigate, useLocation } from "react-router-dom";
+import { useEffect } from "react";
+import { useNavigate, useLocation } from "react-router-dom";
 import useAuth from "../hooks/useAuth";
 
-const PrivateRoute = ({children}) => {
-    const {user, loading} = useAuth();
+const PrivateRoute = ({ children }) => {
+    const { user, loading } = useAuth();
     const location = useLocation();
-    if(loading){
+    const navigate = useNavigate();
+
+    useEffect(() => {
+        if (!loading && !user) {
+            navigate("/login", { state: { from: location } });
+        }
+    }, [loading, user, navigate, location]);
+
+    if (loading) {
         return <progress className="progress w-56"></progress>;
     }
-    if(user){
-        return children;
-    }
 
-    return <Navigate to = "/login" state={{from : location}}/>
+    return user ? children : null;
 };
 
 export default PrivateRoute;

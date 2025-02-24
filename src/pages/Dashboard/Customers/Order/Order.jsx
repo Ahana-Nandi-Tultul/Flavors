@@ -17,10 +17,8 @@ const Order = () => {
           setCartItems(storedCart);
         };
         fetchCart();
-      }, [user]);
+      }, [user, cartItems]);
 
-    const totalPrice = cartItems.reduce((sum, item) => item.price + sum, 0);
-    // console.log(totalPrice);
     useEffect(() => {
         if(cartItems.length > 0){
             setDisabled(false)
@@ -30,10 +28,11 @@ const Order = () => {
         }
 
     }, [cartItems])
-
+    const totalPrice = cartItems.reduce((sum, item) => (item.totalPrice  || 0) + sum, 0);
+    
     const handleDeleteItem = async(item) => {
         event.preventDefault();
-        console.log(item);
+        //console.log(item);
         Swal.fire({
             title: 'Are you sure?',
             text: "You won't be able to revert this!",
@@ -48,10 +47,10 @@ const Order = () => {
                 .then(res => {
                     console.log(res?.data)
                     if(res?.data?.deletedCount){
-                        refetch();
+                      
                         Swal.fire(
                             'Deleted!',
-                            'Your selected course has been deleted.',
+                            'Your selected item has been deleted.',
                             'success'
                         )
                     }
@@ -59,7 +58,7 @@ const Order = () => {
             }
           })
     }
-
+    
     return (
         <div className="w-full p-4">
             <div className="flex justify-between items-center md:w-11/12">

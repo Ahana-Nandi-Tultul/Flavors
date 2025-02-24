@@ -36,7 +36,7 @@ const AddItem = () => {
             quantity : parseInt(quantity), 
             image: imgURL, 
             category, 
-            rating};
+            rating : parseFloat(rating)};
 
          instance.post('/item', {newItem})
          .then(res => {

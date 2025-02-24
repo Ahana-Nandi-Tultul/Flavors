@@ -12,11 +12,12 @@ const useCartUtilities = () => {
             
             existingProduct.quantity += product.quantity;
             existingProduct.totalPrice += product.totalPrice;
-    
-            cart = cart.filter((item) => item._id !== product._id);
-    
+            
+            cart = cart.filter((item) => item._id !== existingProduct._id);
+            
             // Add updated product
             cart.push(existingProduct);
+            console.log(cart);
         } else {
             cart.push(product);
         }
