@@ -16,6 +16,8 @@ import AllProducts from "../pages/Dashboard/Admin/Products/AllProducts/AllProduc
 import AddItem from "../pages/Dashboard/Admin/Products/AddItem/AddItem";
 import Order from "../pages/Dashboard/Customers/Order/Order";
 import Payments from "../pages/Dashboard/Customers/Payment/Payment";
+import PaymentHistory from "../pages/Dashboard/Customers/PaymentHistory/PaymentHistory";
+import ManageOrder from "../pages/Dashboard/Admin/ManageOrder/ManageOrder";
 
  export const router = createBrowserRouter([
     {
@@ -59,11 +61,19 @@ import Payments from "../pages/Dashboard/Customers/Payment/Payment";
           },
           {
               path: "order",
-              element: <Order></Order>
+              element: <CustomerRoutes><Order></Order></CustomerRoutes>
           },
           {
               path: "payments",
               element: <Payments></Payments>
+          },
+          {
+              path: "paymentHistory",
+              element: <PaymentHistory></PaymentHistory>
+          },
+          {
+              path: "manageOrder",
+              element: <AdminRoutes><ManageOrder></ManageOrder></AdminRoutes>
           }
 
         ]

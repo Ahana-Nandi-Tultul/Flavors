@@ -81,12 +81,17 @@ const CheckoutForm = ({ cartItems, price }) => {
           price,
           date: new Date(),
           cartItems: cartItems.map(item => item._id),
-          productId: cartItems.map(item =>  ({
+          productId: cartItems.map(item => ({
             id: item.productId,
             quantity: item.quantity
+            
           })),
-          status: 'service pending',
-          productName: cartItems.map(item => item.name),
+          status: 'Confirmed',
+          productName: cartItems.map(item => ({
+            name: item.name,
+            quantity: item.quantity
+            
+          })),
         };
 
         instance.post('/payments', payment).then((res) => {
