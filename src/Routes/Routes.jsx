@@ -18,6 +18,7 @@ import Order from "../pages/Dashboard/Customers/Order/Order";
 import Payments from "../pages/Dashboard/Customers/Payment/Payment";
 import PaymentHistory from "../pages/Dashboard/Customers/PaymentHistory/PaymentHistory";
 import ManageOrder from "../pages/Dashboard/Admin/ManageOrder/ManageOrder";
+import ManageUsers from "../pages/Dashboard/Admin/ManageUsers/ManageUsers";
 
  export const router = createBrowserRouter([
     {
@@ -74,6 +75,10 @@ import ManageOrder from "../pages/Dashboard/Admin/ManageOrder/ManageOrder";
           {
               path: "manageOrder",
               element: <AdminRoutes><ManageOrder></ManageOrder></AdminRoutes>
+          },
+          {
+              path: "manageUser",
+              element: <AdminRoutes><ManageUsers></ManageUsers></AdminRoutes>
           }
 
         ]
