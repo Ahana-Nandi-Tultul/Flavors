@@ -7,7 +7,7 @@ import { Link, useNavigate } from "react-router-dom";
 const CartModal = ({ isOpen, onClose, user }) => {
   const [cartItems, setCartItems] = useState([]);
   const {getCartItems, syncLocalStorageWithDB, removeItemFromCart} = useCartUtilities()
-  
+  const navigate = useNavigate();
   useEffect(() => {
     const fetchCart = async () => {
       const storedCart = await getCartItems(user);
