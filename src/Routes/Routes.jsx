@@ -28,7 +28,7 @@ import ManageUsers from "../pages/Dashboard/Admin/ManageUsers/ManageUsers";
        {
             path: "/",
             element: <Home></Home>,
-            loader: () => fetch(`http://localhost:5000/totalItems`)
+            loader: () => fetch(`https://flavors-server.vercel.app/totalItems`)
        },
        {
             path: "/login",

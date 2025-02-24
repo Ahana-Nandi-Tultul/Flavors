@@ -4,7 +4,7 @@ const useItems = () => {
     const [items, setItems] = useState([]);
     const [loading, setLoading] = useState(true);
     useEffect(()=> {
-        fetch('http://localhost:5000/allItems')
+        fetch('https://flavors-server.vercel.app/allItems')
         .then(res => res.json())
         .then(data => {
             setItems(data);

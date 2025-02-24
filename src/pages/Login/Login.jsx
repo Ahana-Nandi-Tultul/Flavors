@@ -23,7 +23,7 @@ const Login = () => {
       const onSubmit = (data) => {
         login(data.email, data.password)
         .then(result => {
-            fetch(`http://localhost:5000/users/${data.email}`)
+            fetch(`https://flavors-server.vercel.app/users/${data.email}`)
             .then(res => res.json())
             .then(userData => {
                 const role = userData.role; // Get user role from backend

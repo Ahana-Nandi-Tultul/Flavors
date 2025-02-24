@@ -3,6 +3,7 @@ import useAuth from "../../../../hooks/useAuth";
 import useAxiosSecure from "../../../../hooks/useAxiosSecure";
 import useCartUtilities from "../../../../utilities/cartAndWishList";
 import { Link } from "react-router-dom";
+import Swal from "sweetalert2";
 
 const Order = () => {
     const {getCartItems} = useCartUtilities();
@@ -32,6 +33,7 @@ const Order = () => {
 
     const handleDeleteItem = async(item) => {
         event.preventDefault();
+        console.log(item);
         Swal.fire({
             title: 'Are you sure?',
             text: "You won't be able to revert this!",
@@ -44,7 +46,7 @@ const Order = () => {
             if (result.isConfirmed) {
                 instance.delete(`/carts/${item._id}`)
                 .then(res => {
-                    // console.log(res?.data)
+                    console.log(res?.data)
                     if(res?.data?.deletedCount){
                         refetch();
                         Swal.fire(

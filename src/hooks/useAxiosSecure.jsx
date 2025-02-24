@@ -5,6 +5,7 @@ import useAuth from './useAuth';
 
 const instance = axios.create({
   baseURL: `http://localhost:5000`,
+  // baseURL: `https://flavors-server.vercel.app`
 });
 
 const useAxiosSecure = () => {

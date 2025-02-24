@@ -78,7 +78,7 @@ const ManageOrder = () => {
                         </td>
                         <td>
                             {
-                                oneOrder.productName.map(item => <span>{item.name} - {item.quantity}</span>)
+                                oneOrder.productName.map((item,ind) => <span key={ind}>{item.name} - {item.quantity}</span>)
                             }
                         </td>
                         <td className="uppercase">{oneOrder.status}</td>

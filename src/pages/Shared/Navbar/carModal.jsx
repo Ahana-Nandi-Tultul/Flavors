@@ -14,20 +14,23 @@ const CartModal = ({ isOpen, onClose, user }) => {
       setCartItems(storedCart);
     };
     fetchCart();
-  }, [user]);
+  }, [user, cartItems]);
 
   useEffect(() => {
     if (user && cartItems.length > 0) {
       syncLocalStorageWithDB(user, cartItems);
     }
-  }, [user]);
+  }, [user, cartItems]);
 
   const removeFromCart = (id) => {
-    setCartItems((prevCart) => {
-      const updatedCart = prevCart.filter((item) => item.id !== id);
-      localStorage.setItem("cart", JSON.stringify(updatedCart));
-      return updatedCart;
-    });
+    console.log(id);
+    removeItemFromCart(id, user);
+    navigate("/dashboard/order", { replace: true });
+    // setCartItems((prevCart) => {
+    //   const updatedCart = prevCart.filter((item) => item.id !== id);
+    //   localStorage.setItem("cart", JSON.stringify(updatedCart));
+    //   return updatedCart;
+    // });
   };
   const handleOrderNow = () => {
     navigate("/dashboard/order", { replace: true });
@@ -57,8 +60,8 @@ const CartModal = ({ isOpen, onClose, user }) => {
             {cartItems.map((item) => (
               <li key={item._id} className="flex justify-between items-center border p-2 rounded">
                 <p>{item.name} - ${item.price}</p>
-                <p>Total: ${item.totalQuantity}</p>
-                <button className="text-red-500" onClick={() => removeFromCart(item.id)}>
+                <p>Total: ${item.totalPrice}</p>
+                <button className="text-red-500" onClick={() => removeFromCart(item._id)}>
                   Remove
                 </button>
               </li>

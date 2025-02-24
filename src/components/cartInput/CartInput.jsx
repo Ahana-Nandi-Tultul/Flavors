@@ -10,30 +10,29 @@ const CartInput = ({ item }) => {
   const navigate = useNavigate();
 
   const handleIncrease = () => {
-    setQuantity(prevQuantity => prevQuantity + 1); 
+    setQuantity(quantity => quantity + 1); 
   };
 
   const handleDecrease = () => {
     if (quantity > 1) {
-      setQuantity(prevQuantity => prevQuantity - 1);
+      setQuantity(quantity => quantity - 1);
     }
   };
 
   const handleAddToCart = () => {
     const { _id, name, image, price } = item;
-    const totalQuantity = price * quantity;
+    const totalPrice = price * quantity;
     
     const newItem = {
-      id: _id,
+      _id,
       name, 
       image, 
       price, 
       quantity, 
-      totalQuantity
+      totalPrice
     };
 
     console.log("Adding to cart:", newItem);  
-    addToCart(newItem); 
     Swal.fire({
         position: 'top-end',
         icon: 'success',
@@ -41,6 +40,7 @@ const CartInput = ({ item }) => {
         showConfirmButton: false,
         timer: 1500,
       });
+      addToCart(newItem); 
       navigate('/');
   };
 

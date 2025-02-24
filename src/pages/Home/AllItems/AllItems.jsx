@@ -20,7 +20,7 @@ const AllItems = () => {
 
     useEffect(() => {
         const fetchData = async () => {
-            const res = await fetch(`http://localhost:5000/itemsPerPage?page=${currentPage}&limit=${itemsPerPage}`);
+            const res = await fetch(`https://flavors-server.vercel.app/itemsPerPage?page=${currentPage}&limit=${itemsPerPage}`);
             const data = await res.json();
             setItems(data);
         };
@@ -32,7 +32,7 @@ const AllItems = () => {
         const form = event.target;
         const search = form.search.value;
 
-            fetch(`http://localhost:5000/items?search=${search}`)
+            fetch(`https://flavors-server.vercel.app/items?search=${search}`)
             .then(res => res.json())
             .then(data => setItems(data))
         

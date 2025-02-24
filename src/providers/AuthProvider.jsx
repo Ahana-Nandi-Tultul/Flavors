@@ -29,7 +29,7 @@ const AuthProvider = ({children}) => {
             setUser(currentUser);
             if(currentUser){
             const loggedUser = {email: currentUser?.email};
-                fetch('http://localhost:5000/jwt', {
+                fetch('https://flavors-server.vercel.app/jwt', {
                     method: 'POST',
                     headers: {
                         'content-type' : 'application/json'

@@ -49,7 +49,7 @@ const Signup = () => {
                 }
                 console.log(newUser);
 
-                fetch('http://localhost:5000/users', {
+                fetch('https://flavors-server.vercel.app/users', {
                     method: 'POST',
                     headers: {
                         'content-type': 'application/json'
