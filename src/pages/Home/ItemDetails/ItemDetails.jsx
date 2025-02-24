@@ -40,9 +40,9 @@ const ItemDetails = () => {
     const { name, description, image, quantity, category, rating, price, tags } = item;
 
     return (
-        <div className={`fixed inset-0 z-50 ${open ? 'block' : 'hidden'}`}>
+        <div className={`fixed inset-0 z-50 ${open ? 'block' : 'hidden'} overflow-y-scroll`}>
             <div className="fixed inset-0 bg-black opacity-50"></div>
-            <div className="fixed inset-0 flex justify-center items-center">
+            <div className="fixed inset-0 flex justify-center items-center overflow-y-scroll">
                 <div className="bg-white p-6 rounded shadow-lg w-5/6">
                     <div className="card card-side flex flex-col md:flex-row bg-base-100 shadow-xl overflow-y-scroll">
                         <figure><img src={image} alt="Item" className='h-full' style={{width: "100%", height: "400px"}} /></figure>
